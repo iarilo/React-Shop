@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+
+import React,{useState} from "react";
+import Fanclicker from './compon_hoocs/file_clicker';
+import FanTimer from './compon_hoocs/file_timer';
 
 function App() {
+ const [click,setKlick] = useState(false);
+
+  function Click() {
+    setKlick( !click ); 
+  }
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div style={{width:'10%'}}> 
+
+      <h3>React App</h3>
+     <button onClick={Click}>Toggle clicker</button>
+
+      </div>
+      {click && <Fanclicker/>}
+      <FanTimer/>
     </div>
   );
 }
