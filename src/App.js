@@ -2,12 +2,13 @@
 import React,{useState} from "react";
 import Fanclicker from './compon_hoocs/file_clicker';
 import FanTimer from './compon_hoocs/file_timer';
+import Test from './compon_hoocs/test';
 
 function App() {
  const [click,setKlick] = useState(false);
 
   function Click() {
-    setKlick( !click ); 
+    setKlick((prev) => !prev ); 
   }
   
   return (
@@ -16,10 +17,13 @@ function App() {
 
       <h3>React App</h3>
      <button onClick={Click}>Toggle clicker</button>
+      
 
       </div>
       {click && <Fanclicker/>}
+    {/*  <Fanclicker/> */}
       <FanTimer/>
+      <Test/>
     </div>
   );
 }
