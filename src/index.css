@@ -13,7 +13,7 @@ body {
       align-items: center;
 }
 .conteiner{
-    margin: 20px 0;
+   
     width: 16%;
 }
 .cont_butt{
@@ -27,4 +27,19 @@ body {
 .check{
   text-align: center;
   display: block;
+}
+.auto{
+  width: 15%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.timer_a{
+  color: blue;
+}
+.Memo{
+     margin: auto;
+     width: 31%;
+     display: flex;
+     justify-content: space-evenly;
 }

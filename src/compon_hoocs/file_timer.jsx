@@ -1,14 +1,18 @@
 import React,{useRef ,useEffect, useState} from 'react'
 
-function setDefaultvalue() {
+/*  function setDefaultvalue() {
   //Создаю ключь в localStorage
   const user = localStorage.getItem('text');
-    return (user ? +user : 0); 
- }
+  return (user ? +user : 0);
+ } */
 
-const FanTimer = () => {
-
-  const [count, setCount] = useState(setDefaultvalue);
+ const FanTimer = () => {
+   
+   //const [count, setCount] = useState(setDefaultvalue());
+   const [count, setCount] = useState(()=>{
+   const user = localStorage.getItem('text');
+   return  +user || 0; 
+   }); 
   const [isCount,setIsCount] = useState(false);
   const timerRef = useRef(null);
  // console.log("render")
