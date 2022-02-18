@@ -2,7 +2,7 @@ import React,{useCallback,useMemo,useState} from "react";
 
 
  export const FanCollbeckMemo =React.memo (({onClick, count}) =>{
-   console.log('render',count);
+   //console.log('render',count);
 
    return(
      <div className=" ">

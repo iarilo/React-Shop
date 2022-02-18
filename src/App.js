@@ -7,6 +7,9 @@ import {FanAllNames} from './compon_hoocs/file_all_names';
 import {FanAuto} from './Hoocs/useContext';
 import {UselayoutEffect} from './Hoocs/uselayoutEffect';
 import {DualCounter} from './Hoocs/useCallbeck_useMemo';
+import {UseImperativeHandle} from './Hoocs/useImperativeHandle';
+import {UseReduser} from './Hoocs/useReducer';
+import { Reducer} from './compon_hoocs/test';
 
 function App() {
  const [click,setKlick] = useState(false);
@@ -39,6 +42,12 @@ function App() {
       <hr style={{ width: '50%', background: 'red' }} />
       <DualCounter/>
       <hr style={{ width: '50%', background: 'red' }} />
+      < UseImperativeHandle />
+      <hr style={{ width: '50%', background: 'red' }} />
+      <UseReduser />
+      <hr style={{width:'50%',background:'red',marginBottom:'50px'}}/>
+      <Reducer/>
+      <hr style={{ width: '50%', background: 'red', marginBottom: '50px' }} />
     </div>
   );
 }
